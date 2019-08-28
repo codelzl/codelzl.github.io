@@ -1640,12 +1640,22 @@ article:last-child .post-eof {
   display: inline-block;
 }
 .site-author-image {
-  border: 1px solid #eee;
   display: block;
-  height: auto;
   margin: 0 auto;
-  max-width: 120px;
   padding: 2px;
+  max-width: 120px;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  transition: 1.4s all;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -transform: rotate(360deg);
 }
 .site-author-name {
   color: #222;
@@ -1673,7 +1683,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4ac4ff;
+  background: #82ff58;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
