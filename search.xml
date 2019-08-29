@@ -2,17 +2,6 @@
 <search>
   <entry>
     <title><![CDATA[文章测试2]]></title>
-    <url>%2F2019%2F08%2F29%2F%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%952%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>以太坊</category>
-      </categories>
-      <tags>
-        <tag>标签1</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[文章测试2]]></title>
     <url>%2F2019%2F08%2F29%2F%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%951%2F</url>
     <content type="text"><![CDATA[typora使用1.安装Typora官网下载地址：https://typora.io/pandoc下载地址：http://pandoc.org/installing.html 2.使用（1）标题标题是用“#”实现的，标题前面加一个“#”，代表一级标题；依次类推，标题前面加六个“#”代表六级标题；一共有六级标题，编辑各种文档完全够用。 （2）下划线快捷键Ctrl+u,即可实现下划线功能。 （3）强调在要强调内容前后分别加两个“*”号。 （4）斜体内容前后分别加一个“*”号。 （5）删除线先转化成英文输入法，再把内容前后分别加上两个“~”号。 （6）高亮内容前后分别加两个“=”。 （7）列表/表格 有序列表:输入数字“1”+“.”+空格 ， 自动开始有序列表。 无序列表:输入“+”或“-”或“*”+空格，自动开始无序列表。 Ctrl+T,在弹出的对话框中选择行列数，自动生成列表。 （8）分割线输入三个或三个以上“-”（“*”），再按回车键，即出现一条分割线。 （9）插入 图片插入本地图片：直接把图片拖入即可；插入网络图片：。 链接[链接提示]+(链接地址)。 -数学公式 “$$”+回车。 代码行内代码：代码的两端各加一个“`”号，（在Tab键上面，英文输入法）。代码块：输入三个“~”，按回车键，即可选择编程语言。]]></content>
       <categories>
@@ -21,6 +10,17 @@
       <tags>
         <tag>标签4</tag>
         <tag>标签2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[文章测试2]]></title>
+    <url>%2F2019%2F08%2F29%2F%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%952%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>以太坊</category>
+      </categories>
+      <tags>
+        <tag>标签1</tag>
       </tags>
   </entry>
   <entry>
