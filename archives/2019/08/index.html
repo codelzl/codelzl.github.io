@@ -339,46 +339,6 @@
           
 
 
-<% if(theme.gitment.enable) { %>
-<div id="gitment_title" class="gitment_title"></div>
-<div id="container" style="display:none"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>
-  const myTheme = {
-    render(state, instance) {
-      const container = document.createElement('div');
-      container.lang = "en-US";
-      container.className = 'gitment-container gitment-root-container';
-      container.appendChild(instance.renderHeader(state, instance));
-      container.appendChild(instance.renderEditor(state, instance));
-      container.appendChild(instance.renderComments(state, instance));
-      container.appendChild(instance.renderFooter(state, instance));
-      return container;
-    }
-  }
-
-  function showGitment() {
-    $("#gitment_title").attr("style", "display:none");
-    $("#container").attr("style", "").addClass("gitment_container");
-    var gitment = new Gitment({
-      id: decodeURI(window.location.pathname),
-      theme: myTheme,
-      owner: 'codelzl',
-      repo: 'codelzl.github.io',
-      oauth: {
-        client_id: 'd99b52f3420a5121d9b3',
-        client_secret: '860fa5632aec2495e98406d61e88845e94a46708'
-       }
-    });
-    gitment.render('container');
-  }
-
-  showGitment();
-</script>
-<% } %>
-
         </div>
           
   
