@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://codelzl.github.io/about/index.html</loc>
+    
+    <lastmod>2019-08-29T01:56:52.787Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://codelzl.github.io/2019/08/29/typora%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-08-29T01:49:05.692Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://codelzl.github.io/tags/index.html</loc>
     
     <lastmod>2019-08-29T01:33:45.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://codelzl.github.io/about/index.html</loc>
-    
-    <lastmod>2019-08-28T15:22:02.085Z</lastmod>
     
   </url>
   
