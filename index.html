@@ -393,7 +393,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-02 09:56:58" itemprop="dateModified" datetime="2019-09-02T09:56:58+08:00">2019-09-02</time>
+                <time title="修改时间：2019-09-02 15:52:08" itemprop="dateModified" datetime="2019-09-02T15:52:08+08:00">2019-09-02</time>
               </span>
             
           
@@ -422,29 +422,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-智能合约可升级性"><a href="#1-智能合约可升级性" class="headerlink" title="1.智能合约可升级性"></a>1.智能合约可升级性</h1><p>智能合约一旦部署无法进行修改，常见方案</p>
-<h2 id="1-1-主从合约"><a href="#1-1-主从合约" class="headerlink" title="1.1 主从合约"></a>1.1 主从合约</h2><p>Master-Slave contracts</p>
-<p>部署一个主合约，以及其他合约，其中主合约负责存储所有其他合约的地址，并在需要时返回所需的地址。</p>
-<p>优点：简单 </p>
-<p>缺点：不易进行合约资产转移到新合约</p>
-<h2 id="1-2永久存储合约"><a href="#1-2永久存储合约" class="headerlink" title="1.2永久存储合约"></a>1.2永久存储合约</h2><p>Eternal Storage contracts</p>
-<p>逻辑合约和数据合约彼此分开。 数据合约是永久性的，不可升级。 逻辑合约可以根据需要多次升级，并将更改通知给数据合约。通常会和主从技术相结合。</p>
-<p>缺点：数据合约不可更改、逻辑合约外部调用数据合约消耗gas</p>
-<h2 id="1-3-可升级存储代理合约"><a href="#1-3-可升级存储代理合约" class="headerlink" title="1.3 可升级存储代理合约"></a>1.3 可升级存储代理合约</h2><p>Upgradable Storage Proxy Contracts</p>
-<p>代理合约以及逻辑合约，将继承同一存储合约。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13948782-166d7d54d5266dc2?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp" alt="img"></p>
-<p>代理合约将有一个回退函数，委托调用逻辑合约，从而实现逻辑合约在代理存储中进行更改。</p>
-<h2 id="1-4委托调用"><a href="#1-4委托调用" class="headerlink" title="1.4委托调用"></a>1.4委托调用</h2><p>EVM所提供的DELEGATECALL操作码，DELEGATECALL就像是一个普通的CALL 调用操作码，不同之处在于目标地址上的代码是在调用合约上下文中执行的，而原始调用的msg.sender以及msg.value将被保留。</p>
-<h2 id="分离逻辑和数据合约"><a href="#分离逻辑和数据合约" class="headerlink" title="分离逻辑和数据合约"></a>分离逻辑和数据合约</h2><p>逻辑合约通过setter更新数据，而数据合约只允许逻辑合约调用setter。这允许在保持数据不变的同时更换实现逻辑，从而实现完全可升级的系统。</p>
-<p>通过引导用户使用新的逻辑合约（通过诸如ENS的解析器）并更新数据合约的权限来允许新的逻辑合约执行setter，就可以实现合约的更新。</p>
-<h2 id="键值对数据模型分离逻辑和数据合约"><a href="#键值对数据模型分离逻辑和数据合约" class="headerlink" title="键值对数据模型分离逻辑和数据合约"></a>键值对数据模型分离逻辑和数据合约</h2><p>不使用最终期望数据结构（struct，mapping等）来定义合约数据模型，所有数据都被抽象化并存储在键值对中，然后使用一个标准的命名系统以及sha256散列算法用于查找数据值。</p>
-<p>首先需要部署代理合约以及ImplementationV1合约，然后调用这个代理合约的upgradeTo(address)函数，同时pass掉我们的ImplementationV1合约地址。现在，我们可以忘记这个ImplementationV1合约的地址，并把代理合约的地址作为我们的主地址。</p>
-<p>为了实现升级，我们在网络上部署这个合约，然后调用代理合约的upgradeTo(address) 函数，同时pass掉ImplementationV2合约的地址。</p>
-<p>测试addplayer<code>&quot;0x6d2181033f0d04e5132ee4005ba3c6ff3dbabe86&quot;,2</code></p>
-<p>setpoints<code>&quot;0x6d2181033f0d04e5132ee4005ba3c6ff3dbabe86&quot;,4</code></p>
-<p>相关文章链接：<a href="https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2" target="_blank" rel="noopener">https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2</a></p>
-<p><a href="https://yos.io/2018/10/28/upgrading-solidity-smart-contracts/" target="_blank" rel="noopener">https://yos.io/2018/10/28/upgrading-solidity-smart-contracts/</a></p>
-
+          <p>智能合约升级的基本思路以及具体简单demo实现</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/30/实现可升级智能合约/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
