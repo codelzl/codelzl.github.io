@@ -55,21 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="1.vue模板 script部分 export default {   name: &quot;Home&quot;,   data() {     return {};   },   methods: {     // 组件的方法   },   watch: {     // watch擅长处理的场景：一个数据影响多个数据   },   computed: {     // computed擅长处理的场景：一个数据">
+  <meta name="description" content="前端VUE框架学习总结与分享">
 <meta name="keywords" content="vue,跨域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue跨域问题解决">
 <meta property="og:url" content="https://codelzl.github.io/2019/10/29/vue前端学习/index.html">
 <meta property="og:site_name" content="区块链技术入门到放弃">
-<meta property="og:description" content="1.vue模板 script部分 export default {   name: &quot;Home&quot;,   data() {     return {};   },   methods: {     // 组件的方法   },   watch: {     // watch擅长处理的场景：一个数据影响多个数据   },   computed: {     // computed擅长处理的场景：一个数据">
+<meta property="og:description" content="前端VUE框架学习总结与分享">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="c:/Users/Li-PC/AppData/Roaming/Typora/typora-user-images/image-20191127182222129.png">
-<meta property="og:image" content="c:/Users/Li-PC/AppData/Roaming/Typora/typora-user-images/image-20191127182139672.png">
-<meta property="og:updated_time" content="2019-11-27T10:22:47.285Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ZPDDKgy1g9rglkdkgsj30lo0eet9e.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006ZPDDKgy1g9rglyp98hj30dr05e0ss.jpg">
+<meta property="og:updated_time" content="2019-12-10T03:28:03.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue跨域问题解决">
-<meta name="twitter:description" content="1.vue模板 script部分 export default {   name: &quot;Home&quot;,   data() {     return {};   },   methods: {     // 组件的方法   },   watch: {     // watch擅长处理的场景：一个数据影响多个数据   },   computed: {     // computed擅长处理的场景：一个数据">
-<meta name="twitter:image" content="c:/Users/Li-PC/AppData/Roaming/Typora/typora-user-images/image-20191127182222129.png">
+<meta name="twitter:description" content="前端VUE框架学习总结与分享">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006ZPDDKgy1g9rglkdkgsj30lo0eet9e.jpg">
   <link rel="canonical" href="https://codelzl.github.io/2019/10/29/vue前端学习/">
 
 
@@ -302,7 +302,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-27 18:22:47" itemprop="dateModified" datetime="2019-11-27T18:22:47+08:00">2019-11-27</time>
+                <time title="修改时间：2019-12-10 11:28:03" itemprop="dateModified" datetime="2019-12-10T11:28:03+08:00">2019-12-10</time>
               </span>
             
           
@@ -331,7 +331,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-vue模板-script部分"><a href="#1-vue模板-script部分" class="headerlink" title="1.vue模板 script部分"></a>1.vue模板 script部分</h1><script>
+        <p>前端VUE框架学习总结与分享</p>
+<a id="more"></a>
+
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><p>node v10.13.0  <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a> </p>
+<p>编辑器：  <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. vutur ，为 vue 文件提供代码高亮</span><br><span class="line">2. Indent-Rainbow ，让缩进的区域以彩色色块显示</span><br></pre></td></tr></table></figure>
+
+<h2 id="构建自己的vue模板"><a href="#构建自己的vue模板" class="headerlink" title="构建自己的vue模板"></a>构建自己的vue模板</h2><p>文件–&gt; 首选项 –&gt; 用户代码片段–&gt;Vue.json</p>
+<p>以下覆盖替换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;Print to console&quot;: &#123;</span><br><span class="line">            &quot;prefix&quot;: &quot;vue&quot;, // 在 Intellisense 中选择代码片段时将使用的前缀</span><br><span class="line">            &quot;body&quot;: [</span><br><span class="line">                    &quot;&lt;template&gt;&quot;,</span><br><span class="line">                    &quot;  &lt;div&gt;template&lt;/div&gt;&quot;,</span><br><span class="line">                    &quot;&lt;/template&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;script&gt;&quot;,</span><br><span class="line">                    &quot;export default &#123;&quot;,</span><br><span class="line">                    &quot;  name: &apos;&apos;,&quot;,</span><br><span class="line">                    &quot;  data () &#123;&quot;,</span><br><span class="line">                    &quot;    return &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;    &#125;&quot;,</span><br><span class="line">                    &quot;  &#125;,&quot;,</span><br><span class="line">                    &quot;  mounted () &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;  &#125;,&quot;,</span><br><span class="line">                    &quot;  methods: &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;  &#125;&quot;,</span><br><span class="line">                    &quot;&#125;&quot;,</span><br><span class="line">                    &quot;&lt;/script&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;style lang=\&quot;less\&quot; scoped&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;/style&gt;&quot;,</span><br><span class="line">                    &quot;$2&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;description&quot;: &quot;Vue模板&quot; // 代码片段描述。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;&#123;</span><br><span class="line">    &quot;Print to console&quot;: &#123;</span><br><span class="line">            &quot;prefix&quot;: &quot;vue&quot;, // 在 Intellisense 中选择代码片段时将使用的前缀</span><br><span class="line">            &quot;body&quot;: [</span><br><span class="line">                    &quot;&lt;template&gt;&quot;,</span><br><span class="line">                    &quot;  &lt;div&gt;template&lt;/div&gt;&quot;,</span><br><span class="line">                    &quot;&lt;/template&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;script&gt;&quot;,</span><br><span class="line">                    &quot;export default &#123;&quot;,</span><br><span class="line">                    &quot;  name: &apos;&apos;,&quot;,</span><br><span class="line">                    &quot;  data () &#123;&quot;,</span><br><span class="line">                    &quot;    return &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;    &#125;&quot;,</span><br><span class="line">                    &quot;  &#125;,&quot;,</span><br><span class="line">                    &quot;  mounted () &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;  &#125;,&quot;,</span><br><span class="line">                    &quot;  methods: &#123;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;  &#125;&quot;,</span><br><span class="line">                    &quot;&#125;&quot;,</span><br><span class="line">                    &quot;&lt;/script&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;style lang=\&quot;less\&quot; scoped&gt;&quot;,</span><br><span class="line">                    &quot;&quot;,</span><br><span class="line">                    &quot;&lt;/style&gt;&quot;,</span><br><span class="line">                    &quot;$2&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;description&quot;: &quot;Vue模板&quot; // 代码片段描述。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<p>新建vue文件 输入vue选择模板自动生成</p>
+<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p> <a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">Vue 官方文档</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">assets</span><br><span class="line">  		.less可以嵌套的写 可以用变量</span><br><span class="line"> 		elemet ui公用ui库进行样式重置</span><br><span class="line"> 		reset 默认样式重置</span><br><span class="line"></span><br><span class="line">comments 组件 全局公共组件封装使用</span><br><span class="line"></span><br><span class="line">router	路由 组件切换-实现URL变换</span><br><span class="line"></span><br><span class="line">utils codeconfig 错误码封装 </span><br><span class="line">       filter过滤器</span><br><span class="line">       requests请求返回拦截器 用不到登录注册</span><br><span class="line">       </span><br><span class="line">views  页面相关 layout 外层公用部分头尾</span><br><span class="line">     </span><br><span class="line">main.js 插件引入</span><br><span class="line"></span><br><span class="line">package 	项目基础介绍 版本号 启动命令</span><br><span class="line">      	 lint代码检查器 代码规范 </span><br><span class="line">      	 deoedndiance 运行时候依赖 /开发依赖</span><br><span class="line"></span><br><span class="line">proxy   开发生效  ngix生成环境使用</span><br><span class="line"></span><br><span class="line">store 全局 管理 </span><br><span class="line"></span><br><span class="line">vuecli </span><br><span class="line"></span><br><span class="line">vuex 全局状态管理</span><br><span class="line"></span><br><span class="line">mounted页面挂载完毕 在这个里面获取数据</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>使用父组件传到子组件 单项<br>子向组传 事件发布订阅</p>
+<p>v-if 初始false 不渲染<br>v-show css控制显示隐藏</p>
+<p>JavaScript通过HTMLDOM访问整个文档树</p>
+<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><p>新建一个页面</p>
+<p>（1）src下新增vue页面</p>
+<p>（2）router下新增对应路由</p>
+<p>（3） 修改对应跳转路径例如整个页面head最上面部分</p>
+<p>（4）src 下api下写对应逻辑post get</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// @/utils/codeConfig</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  ERROR_CODE: &#123; // 错误码</span><br><span class="line">    SUCCESS: &apos;0&apos; // 请求成功</span><br><span class="line">  &#125;,</span><br><span class="line">  AUDIT_STATUS_ENUM: &#123; // 审核状态枚举</span><br><span class="line">    WAIT: &apos;0&apos;, // 待审核</span><br><span class="line">    PASS: &apos;1&apos;, // 审核通过</span><br><span class="line">    REFUSE: &apos;2&apos; // 审核被拒</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">//get post封装好的工具</span><br><span class="line"></span><br><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">import &#123; Message &#125; from &apos;element-ui&apos;</span><br><span class="line">import codeConfig from &apos;@/utils/codeConfig&apos;</span><br><span class="line"></span><br><span class="line">// 创建axios实例</span><br><span class="line">const service = axios.create(&#123;</span><br><span class="line">  baseURL: process.env.VUE_APP_BASE_API, // api 的 base_url</span><br><span class="line">  timeout: 5000 // 请求超时时间</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// request拦截器</span><br><span class="line">service.interceptors.request.use(</span><br><span class="line">  config =&gt; config,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    // Do something with request error</span><br><span class="line">    console.log(error) // for debug</span><br><span class="line">    Promise.reject(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">// response 拦截器</span><br><span class="line">service.interceptors.response.use(</span><br><span class="line">  response =&gt; &#123;</span><br><span class="line">    /**</span><br><span class="line">     * errCode为非&apos;0&apos;是抛错 可结合自己业务进行修改</span><br><span class="line">     */</span><br><span class="line">    const res = response.data</span><br><span class="line">    if (res.errCode === codeConfig.ERROR_CODE.SUCCESS) &#123;</span><br><span class="line">      return res</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      Message(&#123;</span><br><span class="line">        message: res.msg,</span><br><span class="line">        type: &apos;error&apos;,</span><br><span class="line">        duration: 3 * 1000</span><br><span class="line">      &#125;)</span><br><span class="line">      return res</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    console.log(&apos;err&apos; + error) // for debug</span><br><span class="line">    Message(&#123;</span><br><span class="line">      message: &apos;网络错误&apos;,</span><br><span class="line">      type: &apos;error&apos;,</span><br><span class="line">      duration: 1.5 * 1000</span><br><span class="line">    &#125;)</span><br><span class="line">    return Promise.reject(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export function getSysUserListApi (data) &#123;</span><br><span class="line">  return request(&#123;</span><br><span class="line">    url: &apos;/user/list&apos;,</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    data: &#123; pageStart: 1, pageSize: 10 &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export function chainSearchByName (data) &#123;</span><br><span class="line">  return request(&#123;</span><br><span class="line">    url: &apos;/Chain/chainName/&apos; + data,</span><br><span class="line">    method: &apos;GET&apos;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="1-vue模板-script部分"><a href="#1-vue模板-script部分" class="headerlink" title="1.vue模板 script部分"></a>1.vue模板 script部分</h1><script>
 export default {
   name: "Home",
   data() {
@@ -378,8 +410,9 @@ export default {
 };
 </script>
 
-<h1 id="2-跨域问题解决-bumo区块链"><a href="#2-跨域问题解决-bumo区块链" class="headerlink" title="2.跨域问题解决 bumo区块链"></a>2.跨域问题解决 bumo区块链</h1><p><img src="C:/Users/Li-PC/AppData/Roaming/Typora/typora-user-images/image-20191127182222129.png" alt="image-20191127182222129"></p>
-<p><img src="C:/Users/Li-PC/AppData/Roaming/Typora/typora-user-images/image-20191127182139672.png" alt="image-20191127182139672"></p>
+<h1 id="2-跨域问题解决-bumo区块链"><a href="#2-跨域问题解决-bumo区块链" class="headerlink" title="2.跨域问题解决 bumo区块链"></a>2.跨域问题解决 bumo区块链</h1><p><img src="http://ww1.sinaimg.cn/large/006ZPDDKgy1g9rglkdkgsj30lo0eet9e.jpg" alt="image-20191127182139672.png"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006ZPDDKgy1g9rglyp98hj30dr05e0ss.jpg" alt="image-20191127182222129.png"></p>
+<p>参考 <a href="http://code-fe.lovem.fun/code/fishPond/fe-vue-project.html" target="_blank" rel="noopener">http://code-fe.lovem.fun/code/fishPond/fe-vue-project.html</a></p>
 
     </div>
 
@@ -417,7 +450,7 @@ export default {
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/10/29/solidity——spv实现/" rel="prev" title="solidity——spv资料">
+                <a href="/2019/10/29/solidity—spv资料/" rel="prev" title="solidity——spv资料">
                   solidity——spv资料 <i class="fa fa-chevron-right"></i>
                 </a>
               
@@ -469,7 +502,7 @@ export default {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-vue模板-script部分"><span class="nav-number">1.</span> <span class="nav-text">1.vue模板 script部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-跨域问题解决-bumo区块链"><span class="nav-number">2.</span> <span class="nav-text">2.跨域问题解决 bumo区块链</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发环境"><span class="nav-number">1.</span> <span class="nav-text">开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建自己的vue模板"><span class="nav-number">3.</span> <span class="nav-text">构建自己的vue模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目介绍"><span class="nav-number">4.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DEMO"><span class="nav-number">6.</span> <span class="nav-text">DEMO</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-vue模板-script部分"><span class="nav-number"></span> <span class="nav-text">1.vue模板 script部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-跨域问题解决-bumo区块链"><span class="nav-number"></span> <span class="nav-text">2.跨域问题解决 bumo区块链</span></a></div>
         
       </div>
       <!--/noindex-->
@@ -487,7 +520,7 @@ export default {
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -510,7 +543,9 @@ export default {
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -553,7 +588,9 @@ export default {
         
           
         
-        <span class="site-state-item-count">14</span>
+          
+        
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
